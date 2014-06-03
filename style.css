@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#title {
+    margin: 5%;
+    text-align: center;
+    font-size: 36px;
+}
+
+#content {
+    margin: 2%;
+    box-shadow: inset 2px 2px 3px 3px black;
+}
+
+#box_left {
+    float: left;
+    width: 36%;
+}
+
+#box_right {
+    float: right;
+    width: 64%;
+}
+
+#line_left {
+    white-space: nowrap;
+    float: right;
+}
+
+#line_right {
+    white-space: nowrap;
+    float: left;
+}
+
+#data_left, #data_main, #data_right {
+    font-size: 72px;
+}
+
+#data_left, #data_right {
+    color: #C0C0C0;
+}
+
+#data_main {
+    color: #000000;
+}
