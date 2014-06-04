@@ -1,4 +1,4 @@
-* {
+body * {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -7,18 +7,19 @@
 body {
     color: black;
     background-color: white;
+    text-align: center;
     font-family: helvetica, arial, sans-serif;
 }
 
 #title {
     margin: 5%;
-    text-align: center;
-    font-size: 36px;
+    font-size: 48px;
     font-weight: bold;
 }
 
 #content {
-    margin: 2%;
+    margin: 1% 2%;
+    padding: 6px;
     box-shadow: inset 2px 2px 3px 3px black;
 }
 
@@ -43,7 +44,7 @@ body {
 }
 
 #data_left, #data_main, #data_right {
-    font-size: 72px;
+    font-size: 96px;
 }
 
 #data_left, #data_right {
@@ -55,12 +56,18 @@ body {
 
 #input_play, #input_text, #input_url {
     border: none;
-    margin: 2%;
+    margin: 1% 0;
     padding: 6px;
     box-shadow: inset 1px 1px 2px 2px black;
-    font-size: 24px;
 }
 
 #input_play {
+    width: 30%;
     font-weight: bold;
+    font-size: 36px;
+}
+
+#input_text, #input_url {
+    width: 60%;
+    font-size: 24px;
 }
