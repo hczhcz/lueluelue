@@ -31,7 +31,7 @@ function playExec(data, step) {
 }
 
 var playing = false;
-var playingData = null;
+var playingData = [];
 var playingStep = 0;
 var playingTick = 100;
 
@@ -49,14 +49,8 @@ function playLoad(data, step) {
     playingStep = step;
 }
 
-function playStart() {
-    playing = true;
+function playStartPause() {
+    playing = !playing;
 }
 
-function playPause() {
-    playing = false;
-}
-
-playLoad(parse(''), 0);
 playTimer();
-playStart();
