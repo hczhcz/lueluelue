@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1 id="title">
-        Lue~Lue~Lue~<br>
-        Reading Accelerator<br>
+        Lue~Lue~Lue~<br />
+        Reading Accelerator<br />
         阅读加速器
     </h1>
 
@@ -22,15 +22,15 @@
         <div id="box_right">
             <p id="line_right">
                 <span id="data_main"></span>
-                <span id="data_right"></span>
+                <span id="data_right">Loading...</span>
             </p>
         </div>
     </div>
 
     <div id="control">
-        <div id="input_play">Play / Pause</div>
-        <p><input id="input_text" type="text" /></p>
-        <input id="input_url" type="text" />
+        <button id="input_play" onclick="playStartPause();">Play / Pause</button><br />
+        <textarea id="input_text" type="text" rows="5"></textarea><br />
+        <input id="input_url" type="text" value="http://" />
     </div>
 
     <script src="database.js"></script>
