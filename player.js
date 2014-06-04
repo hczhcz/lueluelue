@@ -1,8 +1,15 @@
 var maxLeft = 10;
 var maxRight = 20;
+var initStep = -10;
+
+var playing = false;
+var playingData = [];
+var playingStep = initStep;
+var playingTick = 100;
 
 function playExec(data, step) {
-    if (step >= data.length) return;
+    if (step >= data.length) return false;
+    if (step < 0) step = 0;
 
     var lText = '';
     var mText = '';
@@ -28,25 +35,27 @@ function playExec(data, step) {
     data_left.appendChild(document.createTextNode(lText));
     data_main.appendChild(document.createTextNode(mText));
     data_right.appendChild(document.createTextNode(rText));
-}
 
-var playing = false;
-var playingData = [];
-var playingStep = 0;
-var playingTick = 100;
+    return true;
+}
 
 function playTimer() {
     if (playing) {
-        playExec(playingData, playingStep);
-        playingStep++;
+        if (playExec(playingData, playingStep)) {
+            playingStep++;
+        } else {
+            playing = false;
+            playingStep = initStep;
+        }
     }
 
     setTimeout(playTimer, playingTick);
 }
 
-function playLoad(data, step) {
+function playLoad(data, step, init) {
     playingData = data;
     playingStep = step;
+    playExec(playingData, init ? initStep : playingStep);
 }
 
 function playStartPause() {
