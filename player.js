@@ -9,7 +9,6 @@ var playingTick = 100;
 
 function getMainWidth() {
     var result = data_main.clientWidth / data_main.clientHeight;
-    alert(result);
     return result && result > 0.5 ? result : 0.5;
 }
 
