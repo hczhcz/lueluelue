@@ -43,7 +43,7 @@ body {
     float: left;
 }
 
-#data_left, #data_main, #data_right {
+#data_left, #data_main, #data_main_extra, #data_right {
     font-size: 96px;
 }
 
@@ -51,7 +51,7 @@ body {
     color: #C0C0C0;
 }
 
-#data_main {
+#data_main, #data_main_extra {
 }
 
 #input_play, #input_text, #input_url {
