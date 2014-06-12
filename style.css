@@ -54,17 +54,24 @@ body {
 #data_main, #data_main_extra {
 }
 
-#input_play, #input_text, #input_url {
+#input_tick, #input_play, #input_text, #input_url {
     border: none;
     margin: 1% 0;
     padding: 6px;
     box-shadow: inset 1px 1px 2px 2px black;
 }
 
+#input_tick, #input_unit, #input_play {
+    font-size: 36px;
+}
+
+#input_tick {
+    width: 10%;
+}
+
 #input_play {
     width: 30%;
     font-weight: bold;
-    font-size: 36px;
 }
 
 #input_text, #input_url {
