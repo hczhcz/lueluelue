@@ -48,7 +48,7 @@ body {
 }
 
 #data_left, #data_right {
-    color: #C0C0C0;
+    color: #E0E0E0;
 }
 
 #data_main, #data_main_extra {
@@ -77,4 +77,8 @@ body {
 #input_text, #input_url {
     width: 60%;
     font-size: 24px;
+}
+
+#input_text {
+    overflow-y: -moz-scrollbars-none;
 }
