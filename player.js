@@ -3,8 +3,11 @@ var maxRight = 20;
 var initStep = -5;
 
 var playing = false;
+var playingText = '';
 var playingData = [];
 var playingStep = initStep;
+
+var parseFunc = parse;
 
 function playExec(data, step) { // Return next tick rate
     if (step >= data.length) return 0;
@@ -66,14 +69,21 @@ function playTimer() {
     setTimeout(playTimer, tickRate * input_tick.value);
 }
 
-function playLoad(data, step, init) {
-    playingData = data;
+function playLoad(text, step, init) {
+    playingText = text;
+    playingData = parseFunc(text);
     playingStep = init ? initStep : step;
     playExec(playingData, playingStep);
 }
 
 function playStartPause() {
-    playing = !playing;
+    if (playing) {
+        playing = false;
+    } else if (input_text.value != playingText && input_text.value != '') {
+        playLoad(input_text.value, 0, true);
+    } else {
+        playing = true;
+    }
 }
 
 playTimer();

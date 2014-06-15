@@ -30,7 +30,7 @@ function loadDefault() {
         data = dataEn;
     }
 
-    playLoad(parse(data), 0, true);
+    playLoad(data, 0, true);
 }
 
 loadDefault();
