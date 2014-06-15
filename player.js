@@ -5,7 +5,6 @@ var initStep = -5;
 var playing = false;
 var playingData = [];
 var playingStep = initStep;
-var playingTick = 100;
 
 function playExec(data, step) { // Return next tick rate
     if (step >= data.length) return 0;
@@ -44,7 +43,7 @@ function playExec(data, step) { // Return next tick rate
     data_main_extra.appendChild(document.createTextNode(xText));
     data_right.appendChild(document.createTextNode(rText));
 
-    return step >= 0 ? data[step][2] : 0.5;
+    return (step >= 0) ? data[step][2] : 0.5;
 }
 
 function playTimer() {
@@ -64,7 +63,7 @@ function playTimer() {
         tickRate = 1;
     }
 
-    setTimeout(playTimer, tickRate * playingTick);
+    setTimeout(playTimer, tickRate * input_tick.value);
 }
 
 function playLoad(data, step, init) {

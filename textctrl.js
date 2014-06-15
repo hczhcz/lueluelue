@@ -4,7 +4,7 @@
 */
 
 function exampleData() {
-    // [data, extra_highlighted]
+    // [data, extra_highlighted, time]
     return [
         ['今天', 0, 2],
         ['我', 2, 1],
