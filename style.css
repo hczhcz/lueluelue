@@ -54,7 +54,7 @@ body {
 #data_main, #data_main_extra {
 }
 
-#input_tick, #input_play, #input_text, #input_url {
+#input_tick, #input_play, #input_text {
     border: none;
     margin: 1% 0;
     padding: 6px;
@@ -74,11 +74,7 @@ body {
     font-weight: bold;
 }
 
-#input_text, #input_url {
+#input_text {
     width: 60%;
     font-size: 24px;
-}
-
-#input_text {
-    overflow-y: -moz-scrollbars-none;
 }
