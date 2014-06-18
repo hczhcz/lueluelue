@@ -11,6 +11,10 @@ body {
     font-family: helvetica, arial, sans-serif;
 }
 
+a {
+    color: black;
+}
+
 #title {
     margin: 5%;
     font-size: 48px;
