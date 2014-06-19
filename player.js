@@ -86,5 +86,23 @@ function playStartPause() {
     }
 }
 
+function playL() {
+    playing = false;
+    if (playingStep > 0) {
+        playingStep = (playingStep > 10) ? (playingStep - 10) : 0;
+    }
+    playExec(playingData, playingStep);
+}
+
+function playR() {
+    playing = false;
+    playingStep += 10;
+    playExec(playingData, playingStep);
+}
+
+input_play.onclick = playStartPause;
+data_left.onclick = playL;
+data_right.onclick = playR;
+
 playTimer();
 playStartPause();
